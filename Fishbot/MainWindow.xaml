@@ -1,0 +1,16 @@
+﻿<Window x:Class="Fishbot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fishbot"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Select window" HorizontalAlignment="Left" Margin="10,380,0,0" VerticalAlignment="Top" Width="94" Click="FindButton"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="109,380,0,0" VerticalAlignment="Top" Width="94" Click="StartButton"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="208,380,0,0" VerticalAlignment="Top" Width="94" Click="StopButton"/>
+        <ListBox x:Name="processlist" Margin="10,10,300,101" SelectionChanged="Processlist_SelectionChanged"/>
+
+    </Grid>
+</Window>
