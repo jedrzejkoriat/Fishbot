@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -56,7 +57,9 @@ namespace Fishbot
 				Thread.Sleep(1000); // czekaj 1 sekundę między próbami
 
 				Bitmap screenshot = User.CaptureWindow(processId);
+				screenshot.Save("screenshot.png", ImageFormat.Png);
 				string text = OCR.RecognizeText(screenshot);
+				Console.WriteLine(text);
 
 				if (text.Contains("Kliknij spację jeszcze"))
 				{
@@ -77,7 +80,6 @@ namespace Fishbot
 
 				attempt++;
 				foundText = false;
-				Thread.Sleep(5000);
 			}
 
 			// Przywróć poprzednie okno

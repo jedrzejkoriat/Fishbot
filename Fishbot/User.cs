@@ -54,8 +54,10 @@ public class User
 		IntPtr hdcSrc = GetWindowDC((IntPtr)handle);
 		RECT windowRect = new RECT();
 		GetWindowRect((IntPtr)handle, ref windowRect);
-		int width = windowRect.right - windowRect.left;
-		int height = windowRect.bottom - windowRect.top;
+
+		int width = Math.Min(495, windowRect.right - windowRect.left);
+		int height = Math.Min(270, windowRect.bottom - windowRect.top);
+
 		Bitmap bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
 		using (Graphics graphics = Graphics.FromImage(bmp))
 		{
@@ -65,5 +67,6 @@ public class User
 		}
 		ReleaseDC((IntPtr)handle, hdcSrc);
 		return bmp;
+
 	}
 }

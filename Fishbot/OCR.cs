@@ -13,7 +13,7 @@ namespace Fishbot
 		public static string RecognizeText(Bitmap image)
 		{
 			// Pełna ścieżka do folderu tessdata
-			string tessDataPath = @"C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\Fishbot\bin\Debug";
+			string tessDataPath = @"C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\Fishbot\Fishbot\bin\Debug";
 
 			// Sprawdzenie czy plik istnieje
 			if (!System.IO.File.Exists(System.IO.Path.Combine(tessDataPath, "pol.traineddata")))
