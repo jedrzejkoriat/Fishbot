@@ -29,6 +29,5 @@
 ### **10. Select your Metin2 client window**
 ![image](https://github.com/user-attachments/assets/5e40d829-63bd-4e67-8994-8a946cb051ab)
 ### **11. Press "Start"**
-### This will now wait for the text "Kliknij spację jeszcze" in the first line from the bottom, then read the numerical value and press space that many times.
-### After then it will repeat the cycle until you press stop.
+### First, it will place the bait on your rod (F3) and cast it into the water (Space), then wait for the text "Kliknij spację jeszcze X razy" in the first line from the bottom, read the numerical value (X), and press space X times. Then the cycle repeats.
 ### Enjoy! 🐟
